@@ -1,6 +1,7 @@
 {
-  "name": "nextjs-template",
-  "version": "0.1.0",
+  "name": "nextjs-pomodoro-clock",
+  "version": "0.1.0-beta",
+  "description": "A Pomodoro Clock, featuring NextJS and Typescript",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -30,5 +31,24 @@
     "eslint-plugin-react": "^7.23.2",
     "prettier": "^2.2.1",
     "sass": "^1.32.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evfjunior/nextjs-pomodoro-clock.git"
+  },
+  "keywords": [
+    "nextjs",
+    "reactjs",
+    "next",
+    "react",
+    "typescript",
+    "pomodoro",
+    "clock"
+  ],
+  "author": "evfjunior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evfjunior/nextjs-pomodoro-clock/issues"
+  },
+  "homepage": "https://github.com/evfjunior/nextjs-pomodoro-clock#readme"
 }
