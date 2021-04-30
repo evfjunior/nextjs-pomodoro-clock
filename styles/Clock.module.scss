@@ -1,0 +1,40 @@
+@import 'core';
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.clock {
+  position: relative;
+
+  @include flex-centered;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+}
+
+.display {
+  position: absolute;
+
+  @include flex-centered;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem;
+
+  @include flex-centered;
+  flex-direction: column;
+}
