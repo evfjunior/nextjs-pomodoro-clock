@@ -1,0 +1,18 @@
+@import 'core';
+
+.button {
+  @include flex-centered;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 50%;
+
+  @include box-shadow;
+
+  background: $white;
+  color: $black;
+
+  &:focus {
+    outline: 1px solid $black;
+  }
+}
