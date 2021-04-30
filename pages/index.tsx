@@ -1,5 +1,9 @@
 import Head from 'next/head'
 
+import Clock from '../components/Clock'
+import Container from '../components/Container'
+import Title from '../components/Title'
+
 export default function Home() {
   return (
     <>
@@ -8,9 +12,10 @@ export default function Home() {
       </Head>
 
       <body>
-        <main>
-          <h1>Pomodoro Clock</h1>
-        </main>
+        <Container>
+          <Title appName={'Pomodoro Clock'} />
+          <Clock />
+        </Container>
       </body>
     </>
   )
