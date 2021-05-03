@@ -1,4 +1,4 @@
-@import 'core';
+@import 'utils';
 
 * {
   margin: 0;
@@ -13,13 +13,12 @@
 
 html,
 body {
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-
   background-color: $black;
   color: $white;
   font-family: $font-stack;
+  font-size: 100%;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {

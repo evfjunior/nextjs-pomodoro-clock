@@ -5,10 +5,16 @@
     0 8px 8px rgba(#000, 0.15);
 }
 
-@mixin flex-centered {
+@mixin flex-centered($direction: column) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin letter-spacing($spacing) {
+  letter-spacing: $spacing;
+  margin-right: -$spacing;
 }
 
 @mixin transition-all {

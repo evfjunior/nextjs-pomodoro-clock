@@ -1,12 +1,16 @@
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar'
 
-interface ArcProps {
+interface Props {
   clockType: boolean
   limit: number
   percentage: number
 }
 
-export default function Arc({ clockType, limit, percentage }: ArcProps) {
+const CircularProgressBar: React.FC<Props> = ({
+  clockType,
+  limit,
+  percentage
+}) => {
   return (
     <CircularProgressbar
       maxValue={limit}
@@ -22,3 +26,5 @@ export default function Arc({ clockType, limit, percentage }: ArcProps) {
     />
   )
 }
+
+export default CircularProgressBar

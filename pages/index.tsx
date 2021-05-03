@@ -4,19 +4,19 @@ import Clock from '../components/Clock'
 import Container from '../components/Container'
 import Title from '../components/Title'
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <Head>
         <title>Pomodoro Clock</title>
       </Head>
 
-      <body>
-        <Container>
-          <Title appName={'Pomodoro Clock'} />
-          <Clock />
-        </Container>
-      </body>
+      <Container>
+        <Title appName={'Pomodoro Clock'} />
+        <Clock />
+      </Container>
     </>
   )
 }
+
+export default Home

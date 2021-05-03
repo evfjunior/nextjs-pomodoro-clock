@@ -1,18 +1,20 @@
-import styles from '../styles/Display.module.scss'
+import styles from '../styles/Timer.module.scss'
 
-interface DisplayProps {
+interface Props {
   input: number
 }
 
-export default function Display({ input }: DisplayProps) {
+const Timer: React.FC<Props> = ({ input }) => {
   const time = input
 
   const minutes = String(Math.floor(time / 60)).padStart(2, '0')
   const seconds = String(Math.floor(time % 60)).padStart(2, '0')
 
   return (
-    <div className={styles.display}>
+    <div className={styles.timer}>
       {minutes}:{seconds}
     </div>
   )
 }
+
+export default Timer

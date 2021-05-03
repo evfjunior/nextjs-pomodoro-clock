@@ -1,4 +1,6 @@
+@import 'utils';
+
 .title {
   font-size: 1.5rem;
-  letter-spacing: 0.125rem;
+  @include letter-spacing(0.125rem);
 }

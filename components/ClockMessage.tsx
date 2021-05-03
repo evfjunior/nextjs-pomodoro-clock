@@ -1,9 +1,11 @@
 import styles from '../styles/ClockMessage.module.scss'
 
-interface ClockMessageProps {
+interface Props {
   message: string
 }
 
-export default function ClockMessage({ message }: ClockMessageProps) {
+const ClockMessage: React.FC<Props> = ({ message }) => {
   return <h2 className={styles.message}>{message}</h2>
 }
+
+export default ClockMessage

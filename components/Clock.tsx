@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import Arc from './Arc'
 import Button from './Button'
+import CircularProgressBar from './CircularProgressBar'
 import ClockMessage from './ClockMessage'
-import Display from './Display'
+import Timer from './Timer'
 
 import styles from '../styles/Clock.module.scss'
 
@@ -11,11 +11,11 @@ export default function Clock() {
   const breakTime = 60 * 5
   const taskTime = 60 * 25
 
-  const [isActive, setIsActive] = useState(false)
-  const [isTaskTimer, setIsTaskTimer] = useState(true)
-  const [currentTimer, setCurrentTimer] = useState(taskTime)
-  const [tasksComplete, setTasksComplete] = useState(0)
-  const [time, setTime] = useState(taskTime)
+  const [isActive, setIsActive] = useState<boolean>(false)
+  const [isTaskTimer, setIsTaskTimer] = useState<boolean>(true)
+  const [currentTimer, setCurrentTimer] = useState<number>(taskTime)
+  const [tasksComplete, setTasksComplete] = useState<number>(0)
+  const [time, setTime] = useState<number>(taskTime)
 
   let counterTimeout: NodeJS.Timeout
 
@@ -63,13 +63,17 @@ export default function Clock() {
   return (
     <article className={styles.clock}>
       <div className={styles.wrapper}>
-        <Arc clockType={isTaskTimer} limit={currentTimer} percentage={time} />
+        <CircularProgressBar
+          clockType={isTaskTimer}
+          limit={currentTimer}
+          percentage={time}
+        />
 
         <div className={styles.display}>
           <ClockMessage
             message={isTaskTimer ? "Let's get to work!" : 'Time for a break...'}
           />
-          <Display input={time} />
+          <Timer input={time} />
         </div>
       </div>
 

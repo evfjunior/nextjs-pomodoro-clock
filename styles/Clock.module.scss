@@ -1,4 +1,4 @@
-@import 'core';
+@import 'utils';
 
 .buttons {
   display: flex;
@@ -13,7 +13,6 @@
   position: relative;
 
   @include flex-centered;
-  flex-direction: column;
 
   width: 100%;
   padding: 1rem;
@@ -25,16 +24,16 @@
   position: absolute;
 
   @include flex-centered;
-  flex-direction: column;
 }
 
 .wrapper {
   position: relative;
 
   width: 100%;
+  min-width: 17rem;
+  max-width: 20rem;
   margin: 2rem 0;
   padding: 1rem;
 
   @include flex-centered;
-  flex-direction: column;
 }

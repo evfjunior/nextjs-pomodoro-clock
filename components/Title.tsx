@@ -1,9 +1,11 @@
 import styles from '../styles/Title.module.scss'
 
-interface TitleProps {
+interface Props {
   appName: string
 }
 
-export default function Title({ appName }: TitleProps) {
+const Title: React.FC<Props> = ({ appName }) => {
   return <h1 className={styles.title}>{appName}</h1>
 }
+
+export default Title

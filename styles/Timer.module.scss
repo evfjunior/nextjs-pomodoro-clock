@@ -1,0 +1,6 @@
+@import 'utils';
+
+.timer {
+  font-size: 3rem;
+  @include letter-spacing(0.5rem);
+}

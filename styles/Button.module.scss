@@ -1,7 +1,7 @@
-@import 'core';
+@import 'utils';
 
 .button {
-  @include flex-centered;
+  @include flex-centered(row);
   cursor: pointer;
 
   border: none;
